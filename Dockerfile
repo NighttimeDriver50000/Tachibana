@@ -4,7 +4,6 @@ RUN apk add --no-cache \
     git \
     neovim \
     npm \
-    powerline-extra-symbols \
     python3 \
     zsh
 RUN npm install -g \
