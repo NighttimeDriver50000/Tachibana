@@ -1,0 +1,12 @@
+{
+  "extends": "@nuxt/typescript",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "paths": { "~/*": ["./*"] },
+    "strict": true,
+    "target": "es5"
+  }
+}

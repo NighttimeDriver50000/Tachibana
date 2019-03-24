@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "dependencies": {
+    "material-design-icons-iconfont": "latest",
+    "nuxt": "latest",
+    "vue-property-decorator": "latest",
+    "vuetify": "latest",
+    "@nuxtjs/markdownit": "latest"
+  },
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "devDependencies": {
+    "@nuxt/typescript": "latest"
+  }
+}
