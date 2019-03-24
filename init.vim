@@ -21,7 +21,3 @@ colorscheme snow
 let g:deoplete#enable_at_startup = 1
 
 autocmd FileType vue syntax sync fromstart
-
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup

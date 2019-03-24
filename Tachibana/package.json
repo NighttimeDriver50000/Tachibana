@@ -3,14 +3,19 @@
   "dependencies": {
     "material-design-icons-iconfont": "latest",
     "nuxt": "latest",
+    "stylus": "latest",
+    "stylus-loader": "latest",
+    "ts-loader": "latest",
+    "typescript": "latest",
+    "vue": "latest",
     "vue-property-decorator": "latest",
     "vuetify": "latest",
+    "webpack": "latest",
+    "@nuxt/config": "latest",
+    "@nuxt/typescript": "latest",
     "@nuxtjs/markdownit": "latest"
   },
   "scripts": {
     "dev": "nuxt"
-  },
-  "devDependencies": {
-    "@nuxt/typescript": "latest"
   }
 }

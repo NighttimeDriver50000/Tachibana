@@ -10,8 +10,7 @@ antigen bundle screen
 antigen bundle vi-mode
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme \
-    bullet-train
+#antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 BULLETTRAIN_PROMPT_ORDER=(
   time
   status
@@ -28,4 +27,5 @@ BULLETTRAIN_PROMPT_ORDER=(
 antigen apply
 
 alias ls='ls --color=auto'
-[ -n "$PS1" ] && sh ~/.local/share/nvim/plugged/snow/shell/snow_dark.sh
+# Since bullet train wasn't working
+. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh

@@ -1,12 +1,32 @@
 {
-  "extends": "@nuxt/typescript",
   "compilerOptions": {
     "baseUrl": ".",
     "experimentalDecorators": true,
     "module": "es2015",
     "moduleResolution": "node",
-    "paths": { "~/*": ["./*"] },
+    "paths": {
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
+      ]
+    },
     "strict": true,
-    "target": "es5"
+    "target": "es5",
+    "lib": [
+      "esnext",
+      "esnext.asynciterable",
+      "dom"
+    ],
+    "esModuleInterop": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "noEmit": true,
+    "types": [
+      "@types/node",
+      "@nuxt/vue-app"
+    ]
   }
 }
