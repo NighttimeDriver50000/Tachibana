@@ -12,9 +12,12 @@ with [Nuxt][]. I am full of likely misplaced hope.
 [Stylus]: https://github.com/stylus/stylus/
 [Nuxt]: https://nuxtjs.org/
 
-## Usage
+## Setup
 
-Install [Docker][] and [Vagrant][] on your system.
+Install [Docker][] and [Vagrant][] on your system, then run:
+
+[Docker]: https://hub.docker.com/search/?type=edition&offering=community
+[Vagrant]: https://www.vagrantup.com/intro/getting-started/install.html
 
 ```shell
 vagrant up
