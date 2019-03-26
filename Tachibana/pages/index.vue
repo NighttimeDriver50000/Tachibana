@@ -1,3 +1,5 @@
 <template lang="md">
-# Hello World
+# 2D Convection-Diffusion
+
+$$a + b =c$$
 </template>

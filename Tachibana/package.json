@@ -1,6 +1,7 @@
 {
   "private": true,
   "dependencies": {
+    "katex": "latest",
     "material-design-icons-iconfont": "latest",
     "nuxt": "latest",
     "stylus": "latest",
@@ -11,6 +12,7 @@
     "vue-property-decorator": "latest",
     "vuetify": "latest",
     "webpack": "latest",
+    "@iktakahiro/markdown-it-katex": "latest",
     "@nuxt/config": "latest",
     "@nuxt/typescript": "latest",
     "@nuxtjs/markdownit": "latest"

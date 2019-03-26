@@ -8,9 +8,10 @@ RUN apk add --no-cache \
     musl-dev \
     python3 \
     python3-dev \
+    the_silver_searcher \
     zsh
 RUN npm install -g \
-    material-design-icons-iconfont \
+    katex \
     neovim \
     nuxt \
     stylus \
@@ -18,12 +19,9 @@ RUN npm install -g \
     ts-loader \
     typescript \
     vue \
-    vue-property-decorator \
-    vuetify \
     webpack \
     '@nuxt/config' \
-    '@nuxt/typescript' \
-    '@nuxtjs/markdownit'
+    '@nuxt/typescript'
 RUN pip3 install \
     powerline-status \
     pynvim
