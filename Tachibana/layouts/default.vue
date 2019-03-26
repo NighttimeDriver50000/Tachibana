@@ -12,19 +12,16 @@
       <v-container fluid>
         <nuxt />
       </v-container>
+      <v-footer id="footer" class="pa-3"></v-footer>
     </v-content>
-    <v-footer id="footer" class="pa-3" app></v-footer>
   </v-app>
 </template>
 
 <script lang="ts">
-import ComponentOptions from "vue"
+import { Component, Vue } from "vue-property-decorator"
 
-const config: ComponentOptions ={
-  data: () => ({
-    drawer: null,
-  })
+@Component({})
+export default class DefaultLayout extends Vue {
+  drawer: boolean = false
 }
-
-export default config
 </script>

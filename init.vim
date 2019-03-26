@@ -21,3 +21,7 @@ colorscheme snow
 let g:deoplete#enable_at_startup = 1
 
 autocmd FileType vue syntax sync fromstart
+
+nmap Q gqap
+nmap <leader>r :!touch /home/eiri/Tachibana/reload.touch<cr><cr>
+nmap <leader>l :vsplit<bar>terminal tail -f /home/eiri/Tachibana/cmd.log<cr>G

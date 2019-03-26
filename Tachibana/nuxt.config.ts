@@ -19,7 +19,12 @@ const config: NuxtConfiguration = {
   modules: [ "@nuxtjs/markdownit" ],
   plugins: [ "~/plugins/vuetify" ],
   markdownit: {
-    use: [ "@iktakahiro/markdown-it-katex" ]
+    use: [
+      [
+        "@iktakahiro/markdown-it-katex",
+        { macros: { } }
+      ]
+    ]
   }
 }
 

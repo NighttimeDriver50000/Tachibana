@@ -3,6 +3,7 @@ RUN apk add --no-cache \
     curl \
     gcc \
     git \
+    inotify-tools \
     neovim \
     npm \
     musl-dev \
@@ -16,6 +17,7 @@ RUN npm install -g \
     nuxt \
     stylus \
     stylus-loader \
+    thread-loader \
     ts-loader \
     typescript \
     vue \
@@ -40,10 +42,10 @@ COPY zshrc .zshrc
 
 USER root
 VOLUME /home/eiri/Tachibana
-COPY cmd.sh /cmd.sh
 RUN chown -R eiri:eiri /home/eiri
+COPY cmd.zsh /cmd.zsh
 
 USER eiri
 WORKDIR /home/eiri/Tachibana
 ENV HOST 0.0.0.0
-CMD ["/bin/sh", "/cmd.sh"]
+CMD ["/bin/zsh", "/cmd.zsh"]
