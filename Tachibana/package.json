@@ -2,21 +2,21 @@
   "private": true,
   "dependencies": {
     "katex": "latest",
-    "material-design-icons-iconfont": "latest",
     "nuxt": "latest",
+    "nuxt-property-decorator": "latest",
     "stylus": "latest",
     "stylus-loader": "latest",
     "thread-loader": "latest",
     "ts-loader": "latest",
     "typescript": "latest",
     "vue": "latest",
-    "vue-property-decorator": "latest",
-    "vuetify": "latest",
+    "vuetify-loader": "latest",
     "webpack": "latest",
     "@iktakahiro/markdown-it-katex": "latest",
     "@nuxt/config": "latest",
     "@nuxt/typescript": "latest",
-    "@nuxtjs/markdownit": "latest"
+    "@nuxtjs/markdownit": "latest",
+    "@nuxtjs/vuetify": "latest"
   },
   "scripts": {
     "nuxt": "nuxt"

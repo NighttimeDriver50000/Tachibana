@@ -3,7 +3,6 @@ import NuxtConfiguration from "@nuxt/config"
 const config: NuxtConfiguration = {
   css: [
     "katex/dist/katex.min.css",
-    "material-design-icons-iconfont",
     "@/assets/main.styl"
   ],
   head: {
@@ -16,8 +15,17 @@ const config: NuxtConfiguration = {
       }
     ]
   },
-  modules: [ "@nuxtjs/markdownit" ],
-  plugins: [ "~/plugins/vuetify" ],
+  modules: [
+    "@nuxtjs/markdownit",
+    [
+      "@nuxtjs/vuetify",
+      {
+        materialIcons: true,
+        css: false,
+        treeShake: true,
+      }
+    ]
+  ],
   markdownit: {
     use: [
       [

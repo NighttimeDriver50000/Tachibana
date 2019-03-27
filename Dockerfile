@@ -21,6 +21,9 @@ RUN npm install -g \
     ts-loader \
     typescript \
     vue \
+    vue-template-compiler \
+    vuetify \
+    vuetify-loader \
     webpack \
     '@nuxt/config' \
     '@nuxt/typescript'

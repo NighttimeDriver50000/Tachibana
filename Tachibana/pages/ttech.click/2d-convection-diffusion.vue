@@ -1,6 +1,8 @@
 <template lang="md">
 # 2D Convection-Diffusion
 
+The general [convection-diffusion equation][cde] is
+
 $$
 \gdef\fpd#1#2{\frac{\partial {#1}}{\partial {#2}}}
 \gdef\spd#1#2{\frac{\partial^2 {#1}}{\partial {#2}^2}}
@@ -36,7 +38,7 @@ $$f^*(t, x, y) = f(t + \Delta t, x, y)$$
 
 Using the Crank-Nicholson finite difference method, the 2-D equation becomes
 
-<div class="hidden-xs-and-down">
+<div class="hidden-xs-only">
 
 $$
 \gdef\fdDx#1{
@@ -70,7 +72,7 @@ $$
 $$
 
 </div>
-<div class="hidden-sm-and-up">
+<div class="hidden-sm-and-up" style="font-size: 90%">
 
 $$
 \begin{array}{lrrl}
@@ -85,3 +87,16 @@ $$
 
 </div>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from "nuxt-property-decorator"
+
+@Component
+export default class IndexPage extends Vue {
+  head() {
+    return {
+      title: "2D Convection-Diffusion"
+    }
+  }
+}
+</script>
