@@ -1,5 +1,9 @@
 <template>
-  <v-navigation-drawer v-model="drawer" app fixed>
+  <v-navigation-drawer
+      :value="value"
+      @input="$emit('input', $event)"
+      app
+      fixed>
     <v-list class="pt-3" dense>
       <nuxt-link
           v-for="tile in tiles"
@@ -20,30 +24,30 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "nuxt-property-decorator"
+import { Component, Prop, Vue } from "nuxt-property-decorator";
 
 export class BasicNavTile {
   // Material Icon Name
-  icon?: string
+  icon?: string;
   // Tile Text
-  title: string
+  title: string;
   // Router Link
-  to: string = ""
+  to: string = "";
 
   static counter: number = 0;
 
   constructor() {
-    this.title = `BasicNavTile${ BasicNavTile.counter }`
-    ++BasicNavTile.counter
-  }
-}
+    this.title = `BasicNavTile${ BasicNavTile.counter }`;
+    ++BasicNavTile.counter;
+  };
+};
 
 @Component
 export default class BasicNavigation extends Vue {
   @Prop()
-  drawer: boolean = false
+  value: boolean = false;
 
   @Prop()
-  tiles!: BasicNavTile[]
-}
+  tiles!: BasicNavTile[];
+};
 </script>

@@ -1,9 +1,11 @@
 <template>
   <v-app dark>
-    <BasicNavigation :drawer="drawer" :tiles="navTiles"></BasicNavigation>
+    <BasicNavigation v-model="drawer" :tiles="navTiles"></BasicNavigation>
     <v-toolbar app fixed>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer">
-      </v-toolbar-side-icon>
+      <v-toolbar-side-icon
+        @click.stop="drawer = !drawer"
+        aria-label="Open Navigation Drawer"
+        ></v-toolbar-side-icon>
       <v-toolbar-title>Click TTech</v-toolbar-title>
     </v-toolbar>
     <v-content>
@@ -19,8 +21,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator"
-import BasicNavigation, { BasicNavTile } from "~/components/BasicNavigation.vue"
+import { Component, Vue } from "nuxt-property-decorator";
+import BasicNavigation, { BasicNavTile } from "~/components/BasicNavigation.vue";
 
 @Component({
   components: {
@@ -28,13 +30,26 @@ import BasicNavigation, { BasicNavTile } from "~/components/BasicNavigation.vue"
   }
 })
 export default class TTechClickParent extends Vue {
-  drawer: boolean = false
+  drawer: boolean = false;
 
   navTiles: BasicNavTile[] = [
     {
       title: "2D Convection-Diffusion",
       to: "/ttech.click/2d-convection-diffusion"
     }
-  ]
-}
+  ];
+
+  head() {
+    return {
+      htmlAttrs: { lang: "en" },
+      titleTemplate: "%s - Click TTech"
+    };
+  };
+};
 </script>
+
+<style lang="stylus">
+html
+  background-color: #303030
+  color: #fff
+</style>

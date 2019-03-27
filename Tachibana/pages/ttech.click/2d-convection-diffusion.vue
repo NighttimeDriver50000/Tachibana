@@ -89,14 +89,14 @@ $$
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator"
+import { Component, Vue } from "nuxt-property-decorator";
 
 @Component
 export default class IndexPage extends Vue {
   head() {
     return {
       title: "2D Convection-Diffusion"
-    }
-  }
-}
+    };
+  };
+};
 </script>

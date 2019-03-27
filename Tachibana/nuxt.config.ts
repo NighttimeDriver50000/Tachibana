@@ -1,8 +1,9 @@
-import NuxtConfiguration from "@nuxt/config"
+import NuxtConfiguration from "@nuxt/config";
 
 const config: NuxtConfiguration = {
   css: [
     "katex/dist/katex.min.css",
+    "material-design-icons-iconfont",
     "@/assets/main.styl"
   ],
   head: {
@@ -17,15 +18,22 @@ const config: NuxtConfiguration = {
   },
   modules: [
     "@nuxtjs/markdownit",
+    "@nuxtjs/pwa",
     [
       "@nuxtjs/vuetify",
       {
-        materialIcons: true,
+        materialIcons: false,
         css: false,
         treeShake: true,
       }
     ]
   ],
+  manifest: {
+    description: "An attempt at consolidating my web presence.",
+    name: "Click TTech",
+    short_name: "TTech",
+    start_url: "/ttech.click/2d-convection-diffusion"
+  },
   markdownit: {
     use: [
       [
@@ -33,7 +41,12 @@ const config: NuxtConfiguration = {
         { macros: { } }
       ]
     ]
+  },
+  vuetify: {
+    theme: {
+      primary: "#39b6f2"
+    }
   }
-}
+};
 
-export default config
+export default config;
