@@ -5,6 +5,7 @@
     "material-design-icons-iconfont": "latest",
     "nuxt": "latest",
     "nuxt-property-decorator": "latest",
+    "nuxt-user-agent": "latest",
     "stylus": "latest",
     "stylus-loader": "latest",
     "thread-loader": "latest",

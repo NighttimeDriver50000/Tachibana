@@ -9,12 +9,15 @@
       <v-toolbar-title>TachibanaTech</v-toolbar-title>
     </v-toolbar>
     <v-content>
-      <v-container fluid>
+      <v-container>
         <nuxt-child />
       </v-container>
-      <v-footer class="px-2 py-3">
-        <v-spacer></v-spacer>
-        <div>&copy; 2019 Chris McKinney</div>
+      <v-footer :height="footer" style="background:transparent"></v-footer>
+      <v-footer absolute :height="footer" class="pa-2">
+        <v-layout align-start row fill-height>
+          <v-spacer></v-spacer>
+          <div>&copy; 2019 Chris McKinney</div>
+        </v-layout>
       </v-footer>
     </v-content>
   </v-app>
@@ -31,6 +34,7 @@ import BasicNavigation, { BasicNavTile } from "@/components/BasicNavigation.vue"
 })
 export default class TachibanaTechParent extends Vue {
   drawer: boolean = false
+  footer: number = 32;
 
   navTiles: BasicNavTile[] = [
     {
@@ -47,6 +51,12 @@ export default class TachibanaTechParent extends Vue {
     return {
       htmlAttrs: { lang: "en" },
       titleTemplate: "%s - TachibanaTech"
+    }
+  }
+
+  mounted() {
+    if (this.$ua.isFromAndroid() && this.$ua.browser() == "Chrome") {
+      this.footer = 32 + 56
     }
   }
 }

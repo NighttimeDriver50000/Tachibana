@@ -4,7 +4,7 @@
       @input="$emit('input', $event)"
       app
       fixed>
-    <v-list class="pt-3">
+    <v-list>
       <v-list-tile
           v-for="tile in tiles"
           :key="tile.title"

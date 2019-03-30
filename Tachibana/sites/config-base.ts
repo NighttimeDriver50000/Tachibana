@@ -21,6 +21,7 @@ const config: NuxtConfiguration = {
     ]
   },
   modules: [
+    "nuxt-user-agent",
     "@nuxtjs/markdownit",
     "@nuxtjs/pwa",
     [

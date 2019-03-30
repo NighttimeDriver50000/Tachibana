@@ -23,8 +23,8 @@ endif
 let g:deoplete#enable_at_startup = 1
 autocmd FileType vue syntax sync fromstart
 
+nnoremap Q gqapk$
 nnoremap gq <nop>
-nmap Q gqapk$
 
 command NuxtReload !touch /home/eiri/Tachibana/misc/reload.touch
 nmap <leader>r :NuxtReload<cr><cr>
