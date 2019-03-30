@@ -16,12 +16,18 @@ call plug#end()
 
 set termguicolors
 set background=dark
-colorscheme snow
+if filereadable("/home/eiri/.local/share/nvim/plugged/snow/colors/snow.vim")
+  colorscheme snow
+endif
 
 let g:deoplete#enable_at_startup = 1
-
 autocmd FileType vue syntax sync fromstart
 
-nmap Q gqap
-nmap <leader>r :!touch /home/eiri/Tachibana/reload.touch<cr><cr>
-nmap <leader>l :vsplit<bar>terminal tail -f /home/eiri/Tachibana/cmd.log<cr>G
+nnoremap gq <nop>
+nmap Q gqapk$
+
+command NuxtReload !touch /home/eiri/Tachibana/misc/reload.touch
+nmap <leader>r :NuxtReload<cr><cr>
+command NuxtOpenLog terminal tail -f /home/eiri/Tachibana/misc/cmd.log
+nmap <leader>lh :split<bar>NuxtOpenLog<cr>G
+nmap <leader>lv :vsplit<bar>NuxtOpenLog<cr>G

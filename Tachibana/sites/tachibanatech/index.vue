@@ -6,7 +6,7 @@
         @click.stop="drawer = !drawer"
         aria-label="Open Navigation Drawer"
         ></v-toolbar-side-icon>
-      <v-toolbar-title>Click TTech</v-toolbar-title>
+      <v-toolbar-title>TachibanaTech</v-toolbar-title>
     </v-toolbar>
     <v-content>
       <v-container fluid>
@@ -21,31 +21,35 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
-import BasicNavigation, { BasicNavTile } from "~/components/BasicNavigation.vue";
+import { Component, Vue } from "nuxt-property-decorator"
+import BasicNavigation, { BasicNavTile } from "@/components/BasicNavigation.vue"
 
 @Component({
   components: {
     BasicNavigation
   }
 })
-export default class TTechClickParent extends Vue {
-  drawer: boolean = false;
+export default class TachibanaTechParent extends Vue {
+  drawer: boolean = false
 
   navTiles: BasicNavTile[] = [
     {
+      title: "Home",
+      to: "/"
+    },
+    {
       title: "2D Convection-Diffusion",
-      to: "/ttech.click/2d-convection-diffusion"
+      to: "/2d-convection-diffusion"
     }
-  ];
+  ]
 
   head() {
     return {
       htmlAttrs: { lang: "en" },
-      titleTemplate: "%s - Click TTech"
-    };
-  };
-};
+      titleTemplate: "%s - TachibanaTech"
+    }
+  }
+}
 </script>
 
 <style lang="stylus">

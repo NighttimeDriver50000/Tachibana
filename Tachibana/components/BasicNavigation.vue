@@ -4,50 +4,51 @@
       @input="$emit('input', $event)"
       app
       fixed>
-    <v-list class="pt-3" dense>
-      <nuxt-link
+    <v-list class="pt-3">
+      <v-list-tile
           v-for="tile in tiles"
           :key="tile.title"
-          tag="div"
-          :to="tile.to">
-        <v-list-tile>
-          <v-list-tile-action v-if="tile.icon">
-            <v-icon>{{ tile.icon }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>{{ tile.title }}</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </nuxt-link>
+          @click="$router.push(tile.to)">
+        <v-list-tile-action v-if="tile.icon">
+          <v-icon>{{ tile.icon }}</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+          <v-list-tile-title>
+            <nuxt-link tag="span" :to="tile.to">
+              {{ tile.title }}
+            </nuxt-link>
+          </v-list-tile-title>
+        </v-list-tile-content>
+      </v-list-tile>
     </v-list>
   </v-navigation-drawer>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "nuxt-property-decorator";
+import { Component, Prop, Vue } from "nuxt-property-decorator"
 
 export class BasicNavTile {
   // Material Icon Name
-  icon?: string;
+  icon?: string
   // Tile Text
-  title: string;
+  title: string
   // Router Link
-  to: string = "";
+  to: string = ""
 
-  static counter: number = 0;
+  static counter: number = 0
 
   constructor() {
-    this.title = `BasicNavTile${ BasicNavTile.counter }`;
-    ++BasicNavTile.counter;
-  };
-};
+    this.title = `BasicNavTile${ BasicNavTile.counter }`
+    ++BasicNavTile.counter
+  }
+}
 
 @Component
 export default class BasicNavigation extends Vue {
   @Prop()
-  value: boolean = false;
+  value: boolean = false
 
   @Prop()
-  tiles!: BasicNavTile[];
-};
+  tiles!: BasicNavTile[]
+}
 </script>

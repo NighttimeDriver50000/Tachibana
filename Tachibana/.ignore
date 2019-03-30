@@ -1,5 +1,6 @@
 /dist
 /node_modules
 /.nuxt
-/reload.touch
+/misc
+/package-lock.json
 sw.*

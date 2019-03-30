@@ -1,6 +1,6 @@
 /.vagrant
-/Tachibana/cmd.log
 /Tachibana/dist
+/Tachibana/misc/cmd.log
 /Tachibana/node_modules
 /Tachibana/.nuxt
 sw.*

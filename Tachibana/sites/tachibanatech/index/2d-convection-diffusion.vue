@@ -1,4 +1,5 @@
 <template lang="md">
+
 # 2D Convection-Diffusion
 
 The general [convection-diffusion equation][cde] is
@@ -86,17 +87,18 @@ $$
 $$
 
 </div>
+
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
+import { Component, Vue } from "nuxt-property-decorator"
 
 @Component
-export default class IndexPage extends Vue {
+export default class Page extends Vue {
   head() {
     return {
       title: "2D Convection-Diffusion"
-    };
-  };
-};
+    }
+  }
+}
 </script>

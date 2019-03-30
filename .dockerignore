@@ -1,1 +1,4 @@
+/README.md
+/*.sh
 /Tachibana
+!/Tachibana/misc/init.vim

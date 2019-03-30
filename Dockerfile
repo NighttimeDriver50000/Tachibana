@@ -38,10 +38,13 @@ WORKDIR /home/eiri
 
 RUN curl -fLo .local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-COPY init.vim .config/nvim/init.vim
+COPY --chown=eiri:eiri Tachibana/misc/init.vim .config/nvim/init.vim
 RUN nvim '+PlugInstall|UpdateRemotePlugins|qall'
+RUN rm .config/nvim/init.vim
+RUN ln -s /home/eiri/Tachibana/misc/init.vim .config/nvim/init.vim
+
 RUN curl -fLo antigen.zsh https://git.io/antigen
-COPY zshrc .zshrc
+RUN ln -s /home/eiri/Tachibana/misc/zshrc .zshrc
 
 USER root
 VOLUME /home/eiri/Tachibana
