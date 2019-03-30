@@ -1,0 +1,3 @@
+[submodule "Tachibana/sites/tachibanatech"]
+	path = Tachibana/sites/tachibanatech
+	url = git@github.com:NighttimeDriver50000/tachibanatech.git
