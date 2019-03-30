@@ -21,16 +21,12 @@ Install [Docker][] and [Vagrant][] on your system, then run:
 
 ```shell
 vagrant up
-./zsh.sh
-cd Tachibana
-npm install
-exit
-vagrant reload
+./scripts/zsh.sh
+nvim +NuxtOpenLog
 ```
 
-The website should now be available at `localhost:3000`. Note that it will bind
-to all your interfaces, so if you don't want external access, you will need to
-configure that in your system's firewall.
-
-If you now `zsh.sh` again, you will log into the container, which has Neovim
-set up for development.
+You will see the install and build log. Once the build completes, you will see
+something along the lines of `Listening on: http://172.17.0.4:3000`. The
+website should now be available on port 3000 on the host. Note that it will
+bind to all your interfaces, so if you don't want external access, you will
+need to configure that in your system's firewall.
