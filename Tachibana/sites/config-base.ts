@@ -6,6 +6,7 @@ const config: NuxtConfiguration = {
     devtools: true,
   },
   css: [
+    "highlight.js/styles/androidstudio.css",
     "katex/dist/katex.min.css",
     "material-design-icons-iconfont",
     "@/assets/main.styl"

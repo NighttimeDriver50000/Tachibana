@@ -1,6 +1,7 @@
 {
   "private": true,
   "dependencies": {
+    "highlight.js": "latest",
     "katex": "latest",
     "material-design-icons-iconfont": "latest",
     "nuxt": "latest",

@@ -10,7 +10,7 @@ config.manifest = {
   description: "Personal website of Chris McKinney.",
   name: "TachibanaTech",
   short_name: "TTech",
-  start_url: "/2d-convection-diffusion"
+  start_url: "/"
 }
 
 export default config

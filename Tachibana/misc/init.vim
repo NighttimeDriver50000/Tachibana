@@ -25,6 +25,7 @@ autocmd FileType vue syntax sync fromstart
 
 nnoremap Q gqapk$
 nnoremap gq <nop>
+vnoremap gq <nop>
 
 command NuxtReload !touch /home/eiri/Tachibana/misc/reload.touch
 nmap <leader>r :NuxtReload<cr><cr>

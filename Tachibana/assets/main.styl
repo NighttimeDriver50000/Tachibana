@@ -1,9 +1,11 @@
 @import "./roboto.styl"
 
 $body-font-family = "Roboto"
-$body-font-size = 16px
 
 @import "~vuetify/src/stylus/app"
+
+html
+  font-size: 16px
 
 .katex .accent
   background-color: transparent !important
@@ -11,3 +13,19 @@ $body-font-size = 16px
 
 .container
   max-width: 900px !important
+
+blockquote
+  padding: 16px 0px 16px 24px
+  font-size: 18px
+  font-weight: 300
+
+code
+  background-color: #233 !important
+
+pre > code
+  color: #8bb
+  margin-bottom: 16px
+  padding: 8px
+  &:before
+  &:after
+    content: ""
