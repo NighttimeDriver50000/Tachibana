@@ -1,7 +1,7 @@
 /.vagrant
 /Tachibana/dist
 /Tachibana/misc/cmd.log
-/Tachibana/musc/reload.touch
+/Tachibana/misc/reload.touch
 /Tachibana/node_modules
 /Tachibana/.nuxt
 sw.*
