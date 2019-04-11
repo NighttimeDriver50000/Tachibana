@@ -19,6 +19,7 @@ RUN npm install -g \
     stylus-loader \
     thread-loader \
     ts-loader \
+    ts-node \
     typescript \
     vue \
     vue-template-compiler \

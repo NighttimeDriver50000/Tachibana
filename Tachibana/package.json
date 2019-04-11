@@ -11,6 +11,7 @@
     "stylus-loader": "latest",
     "thread-loader": "latest",
     "ts-loader": "latest",
+    "ts-node": "latest",
     "typescript": "latest",
     "vue": "latest",
     "vuetify-loader": "latest",
