@@ -8,15 +8,22 @@
       <v-list-tile
           v-for="tile in tiles"
           :key="tile.title"
-          @click="$router.push(tile.to)">
+          @click="navigate(tile, $router)">
         <v-list-tile-action v-if="tile.icon">
           <v-icon>{{ tile.icon }}</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
           <v-list-tile-title>
-            <nuxt-link tag="span" :to="tile.to">
+            <nuxt-link v-if="!tile.external" tag="span" :to="tile.to">
               {{ tile.title }}
             </nuxt-link>
+            <div v-if="tile.external">
+              <a :href="tile.to" class="basicnav">
+                {{ tile.title }}
+              </a>
+              <v-spacer></v-spacer>
+              <v-icon>open_in_new</v-icon>
+            </div>
           </v-list-tile-title>
         </v-list-tile-content>
       </v-list-tile>
@@ -26,8 +33,11 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "nuxt-property-decorator"
+import VueRouter from "vue-router"
 
 export class BasicNavTile {
+  // Whether the link is to another site
+  external?: boolean
   // Material Icon Name
   icon?: string
   // Tile Text
@@ -50,5 +60,21 @@ export default class BasicNavigation extends Vue {
 
   @Prop()
   tiles!: BasicNavTile[]
+
+  navigate(tile: BasicNavTile, router: VueRouter) {
+    if (tile.external) {
+      if (window) {
+        window.location.assign(tile.to)
+      }
+    } else {
+      router.push(tile.to)
+    }
+  }
 }
 </script>
+
+<style lang="stylus">
+a.basicnav
+  color: inherit
+  text-decoration: inherit
+</style>

@@ -17,6 +17,7 @@
     "vuetify-loader": "latest",
     "webpack": "latest",
     "@iktakahiro/markdown-it-katex": "latest",
+    "@mdi/font": "latest",
     "@nuxt/config": "latest",
     "@nuxt/typescript": "latest",
     "@nuxtjs/markdownit": "latest",

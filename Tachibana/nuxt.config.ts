@@ -1,3 +1,3 @@
-import config from "./sites/config-tachibanatech"
+import config from "./sites/config-vdex-web"
 
 export default config

@@ -51,6 +51,8 @@ USER root
 VOLUME /home/eiri/Tachibana
 RUN chown -R eiri:eiri /home/eiri
 COPY cmd.zsh /cmd.zsh
+COPY nuxt.zsh /nuxt.zsh
+RUN chmod +x /nuxt.zsh
 
 USER eiri
 WORKDIR /home/eiri/Tachibana

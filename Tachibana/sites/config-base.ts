@@ -4,6 +4,14 @@ const config: NuxtConfiguration = {
   build: {
     cache: true,
     devtools: true,
+    optimization: {
+      minimize: true
+    },
+    typescript: {
+      typeCheck: {
+        memoryLimit: 12288
+      }
+    }
   },
   css: [
     "highlight.js/styles/androidstudio.css",
