@@ -14,12 +14,7 @@
         </v-list-tile-action>
         <v-list-tile-content>
           <v-list-tile-title>
-            <nuxt-link v-if="!tile.external" tag="span" :to="tile.to">
-              {{ tile.title }}
-            </nuxt-link>
-            <a v-if="tile.external" :href="tile.to" class="basicnav">
-              {{ tile.title }}
-            </a>
+            {{ tile.title }}
           </v-list-tile-title>
         </v-list-tile-content>
         <v-list-tile-action v-if="tile.external">
