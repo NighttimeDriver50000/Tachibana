@@ -17,15 +17,14 @@
             <nuxt-link v-if="!tile.external" tag="span" :to="tile.to">
               {{ tile.title }}
             </nuxt-link>
-            <div v-if="tile.external">
-              <a :href="tile.to" class="basicnav">
-                {{ tile.title }}
-              </a>
-              <v-spacer></v-spacer>
-              <v-icon>open_in_new</v-icon>
-            </div>
+            <a v-if="tile.external" :href="tile.to" class="basicnav">
+              {{ tile.title }}
+            </a>
           </v-list-tile-title>
         </v-list-tile-content>
+        <v-list-tile-action v-if="tile.external">
+          <v-icon>open_in_new</v-icon>
+        </v-list-tile-action>
       </v-list-tile>
     </v-list>
   </v-navigation-drawer>
