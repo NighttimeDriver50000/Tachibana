@@ -3,6 +3,7 @@
   "dependencies": {
     "highlight.js": "latest",
     "katex": "latest",
+    "markdown-it-attrs": "latest",
     "material-design-icons-iconfont": "latest",
     "nuxt": "latest",
     "nuxt-property-decorator": "latest",
@@ -20,6 +21,7 @@
     "@mdi/font": "latest",
     "@nuxt/config": "latest",
     "@nuxt/typescript": "latest",
+    "@nuxtjs/axios": "latest",
     "@nuxtjs/markdownit": "latest",
     "@nuxtjs/pwa": "latest",
     "@nuxtjs/vuetify": "latest"

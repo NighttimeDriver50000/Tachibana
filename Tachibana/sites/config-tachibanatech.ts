@@ -8,7 +8,8 @@ if (config.css) {
   config.css.push("@/node_modules/@mdi/font/css/materialdesignicons.min.css")
 }
 config.dir = {
-  pages: "sites/tachibanatech"
+  pages: "sites/tachibanatech/pages",
+  static: "sites/tachibanatech/static"
 }
 config.generate = {
   dir: "dist/tachibanatech"

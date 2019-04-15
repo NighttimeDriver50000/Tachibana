@@ -31,6 +31,7 @@ const config: NuxtConfiguration = {
   },
   modules: [
     "nuxt-user-agent",
+    "@nuxtjs/axios",
     "@nuxtjs/markdownit",
     "@nuxtjs/pwa",
     [
@@ -44,6 +45,7 @@ const config: NuxtConfiguration = {
   ],
   markdownit: {
     use: [
+      "markdown-it-attrs",
       [
         "@iktakahiro/markdown-it-katex",
         { macros: { } }
