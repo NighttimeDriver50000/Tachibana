@@ -14,9 +14,11 @@ Plug 'iloginow/vim-stylus'
 
 call plug#end()
 
-set termguicolors
+if $TERM == 'xterm-256color'
+  set termguicolors
+endif
 set background=dark
-if filereadable("/home/eiri/.local/share/nvim/plugged/snow/colors/snow.vim")
+if filereadable('/home/eiri/.local/share/nvim/plugged/snow/colors/snow.vim')
   colorscheme snow
 endif
 

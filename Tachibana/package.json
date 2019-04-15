@@ -1,6 +1,14 @@
 {
   "private": true,
   "dependencies": {
+    "@iktakahiro/markdown-it-katex": "latest",
+    "@mdi/font": "latest",
+    "@nuxt/config": "latest",
+    "@nuxt/typescript": "latest",
+    "@nuxtjs/axios": "latest",
+    "@nuxtjs/markdownit": "latest",
+    "@nuxtjs/pwa": "latest",
+    "@nuxtjs/vuetify": "latest",
     "highlight.js": "latest",
     "katex": "latest",
     "markdown-it-attrs": "latest",
@@ -16,15 +24,7 @@
     "typescript": "latest",
     "vue": "latest",
     "vuetify-loader": "latest",
-    "webpack": "latest",
-    "@iktakahiro/markdown-it-katex": "latest",
-    "@mdi/font": "latest",
-    "@nuxt/config": "latest",
-    "@nuxt/typescript": "latest",
-    "@nuxtjs/axios": "latest",
-    "@nuxtjs/markdownit": "latest",
-    "@nuxtjs/pwa": "latest",
-    "@nuxtjs/vuetify": "latest"
+    "webpack": "latest"
   },
   "scripts": {
     "nuxt": "nuxt"
